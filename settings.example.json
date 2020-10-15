@@ -1,4 +1,10 @@
 {
-    "mail_name": "testmail@gmail.com",
-    "mail_password": "happy1234"
+    "from": {
+        "name": "testmail@gmail.com",
+        "password": "happy1234"
+    },
+    "to": [
+        "exonbabo1@gmail.com",
+        "exonbabo2@gmail.com"
+    ]
 }
