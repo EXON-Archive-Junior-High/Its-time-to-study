@@ -1,0 +1,11 @@
+{
+  "name": "It-s-time-to-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/1-EXON/It-s-time-to-study.git",
+  "author": "시혁 박 <exon.indiv@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.4.14"
+  }
+}
