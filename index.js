@@ -1,7 +1,9 @@
 const nodemailer = require('nodemailer');
 const settings = require('./settings.json')
+const CronJab = require('cron').CronJob
 
 const main = async () => {
+    console.log('[System] Sending mail...')
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       host: 'smtp.gmail.com',
@@ -11,7 +13,7 @@ const main = async () => {
         user: settings.from.name,
         pass: settings.from.password,
       },
-    });
+    })
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
@@ -32,9 +34,13 @@ const main = async () => {
         8학년 여자 : https://meet.google.com/jik-uevk-hpy<br>
         9학년 남자 : https://meet.google.com/ixx-gkxz-rci<br>
         9학년 여자 : https://meet.google.com/sog-ztfg-oha<br>`,
-    });
+    })
   
-    console.log(`Message sent: ${info.messageId}`);
-  };
-  
-  main().catch(console.error);
+    console.log(`Message sent: ${info.messageId}`)
+}
+
+const stop = () => { console.log('[System] Stop') }
+const task = () => main().catch(console.error)
+
+const job = new CronJab('0 25 7 MON,WED,THU * *', task, stop, true, 'Asia/Seoul')
+

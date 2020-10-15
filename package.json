@@ -6,6 +6,10 @@
   "author": "시혁 박 <exon.indiv@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cron": "^1.8.2",
     "nodemailer": "^6.4.14"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0"
   }
 }
