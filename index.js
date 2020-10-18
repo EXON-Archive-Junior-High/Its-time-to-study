@@ -28,6 +28,6 @@ const main = async () => {
 
 const stop = () => console.log('[System] Stop')
 const task = () => main().catch(console.error)
-task()
-//const job = new CronJab('0 25 7 MON,WED,THU * *', task, stop, true, 'Asia/Seoul')
+
+const job = new CronJab('0 25 7 MON,WED,THU * *', task, stop, true, 'Asia/Seoul')
 
