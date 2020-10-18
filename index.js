@@ -23,7 +23,7 @@ const main = async () => {
       html: settings.content,
     })
   
-    console.log(`Message sent: ${info.messageId}`)
+    console.log(`[System] Message sent: ${info.messageId}`)
 }
 
 const stop = () => console.log('[System] Stop')
