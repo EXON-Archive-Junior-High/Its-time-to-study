@@ -20,6 +20,7 @@ const main = async () => {
       from: `"스학공 알리미" <${settings.mail_name}>`,
       to: settings.to,
       subject: '스스로 학습하자!',
+      text: settings.content,
       html: settings.content,
     })
   
